@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "first post"
+title:  "🚀 first post"
 date:   2023-04-08 01:43:55 -0700
 ---
 

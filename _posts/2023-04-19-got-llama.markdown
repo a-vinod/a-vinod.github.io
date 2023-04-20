@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LLaMA"
+title:  "🦙+🤖 Experimenting with LLaMA"
 date:   2023-04-19
 tags: LLMs
 ---
@@ -20,11 +20,11 @@ I only downloaded the 7B and 13B models for now -- it seems their fine-tuned ver
 
 I'm interested to see how (or if) LLaMA & Alpaca 7B and 13B models performs locally on my Thinkpad laptop. It's spec'd with a Intel Core i5 and 16GB RAM, so I expect it to be relatively slow compared to the likes of ChatGPT. It's still amazing that such a powerful model can run locally in the first place though. Gotta keep perspective.
 
-# Setup
-## LLaMA
-### Background
+## **Setup**
+### LLaMA
+#### Background
 More details to come about LLaMA as I get through the paper.
-### Steps
+#### Steps
 First, I downloaded the 7B and 13B LLaMA models with the download script and approved URL Meta emailed me.
 
 The llama.cpp repo has great docs on how to get set up but it boils down to:
@@ -55,26 +55,31 @@ For a chat interface you may be more familiar with (akin to ChatGPT):
 ```bash
 ./examples/chat.sh
 ```
-## Alpaca
-### Background
+### Alpaca
+#### Background
 Stanford Alpaca (see [tatsu-lab/stanford_alpaca](https://github.com/tatsu-lab/stanford_alpaca)) is a fine-tuned model based on the foundational LLaMA that's better at instruction-following. If you check out the repo, you'll see the data and methodology the Stanford lab used to fine-tune the LLaMA model.
 
 
 However, since Alpaca was release, there have been a lot of interesting developments!
 
-### LoRA (Low-Rank Adaptation):
+#### LoRA (Low-Rank Adaptation):
 > We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks. [[paper](https://arxiv.org/pdf/2106.09685.pdf)]
 
 
 Alpaca-LoRA (see [tloen/alpaca-lora](https://github.com/tloen/alpaca-lora)), as the name suggests, uses LoRA to fine-tune LLaMA. The authors claim that training "runs within hours on a single RTX 4090."
 
-### Cleaned Alpaca Dataset
+#### Cleaned Alpaca Dataset
 Some smart people combed through the dataset used to train the original Alpaca model and saw room for improvement. They made [🤗/yahma/alpaca-cleaned](https://huggingface.co/datasets/yahma/alpaca-cleaned), which conveniently can be used by Alpaca-LoRA!
 
-# Experiments
-Using Alpaca 7B via llama.cpp
 
-## 🍌 Exp 1: Bananas
+## **Experiments**
+
+Using Alpaca 7B via llama.cpp:
+```bash
+./examples/alpaca.sh
+```
+
+### 🍌 Exp 1: Bananas
 ❓ What are the nutritional facts of a banana
 
 💭 A banana is a nutrient-dense fruit, providing vitamins and minerals such as Vitamin C, Potassium, Iron, Copper, Calcium, and Phosphorus. It is also a good source of dietary fiber, containing about 3 grams per medium-sized banana. Additionally, a banana provides about 110 calories and contains about 16.3 grams of total carbohydrates.
@@ -97,4 +102,4 @@ Ingredients: 2 cups of all-purpose flour, 2 teaspoons of baking powder, 1 teaspo
 
 Check out that CPU utilization! Near-100% while the process is running.
 
-![](2023-04-19/taskmanager.png)
+![](/assets/images/2023-04-19/taskmanager.png)
