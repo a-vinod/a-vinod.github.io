@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "🦙+🤖 Experimenting with LLaMA"
+title:  "🦙 🤖 Experimenting with LLaMA"
 date:   2023-04-19
-tags: LLMs
+tags: llms
 ---
 
 This week, I got access to Meta's [LLaMA](https://github.com/facebookresearch/llama) LLM! Now I get to test out all the repos I starred while waiting for this day :)
@@ -23,7 +23,19 @@ I'm interested to see how (or if) LLaMA & Alpaca 7B and 13B models performs loca
 ## **Setup**
 ### LLaMA
 #### Background
-More details to come about LLaMA as I get through the paper.
+The [[paper](https://arxiv.org/abs/2302.13971)] is very digstible -- check it out!
+
+LLaMA was trained on the following dataset (Table 1):
+|Dataset|Sampling %|
+|-|-|
+|[CommonCrawl](https://commoncrawl.org/)|67.0%|
+|[C4](https://huggingface.co/datasets/c4)|15.0%|
+|Github|4.5%|
+|Wikipedia|4.5%|
+|Books|4.5%|
+|ArXiv|2.5%|
+|StackExchange|2.0%|
+
 #### Steps
 First, I downloaded the 7B and 13B LLaMA models with the download script and approved URL Meta emailed me.
 

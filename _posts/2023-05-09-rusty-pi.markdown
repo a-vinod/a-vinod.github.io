@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "🦀 🥧 rusty-pi 00: Make your Pi from Scratch!"
+date:   2023-05-09
+tags: project-announcement raspberry-pi rusty-pi
+---
+
+## What is rusty-pi?
+
+So far, it's just a baremetal blinky program, but I want to develop it into a full-fledged kernel! To double-dip on the learning experience, I'm writing this in [Rust](https://www.rust-lang.org/), a language I've wanted to pick up for systems programming.
+
+[🦀](https://github.com/a-vinod/rusty-pi/tree/main/01_blinky) *Click the crab, she'll take you to the code!*
+![](/assets/images/2023-05-09/demo.gif)
+
+Each subdirectory in the project will build on the previous to accomplish a milestone like blinky, UART, etc. similar to a tutorial format.
+
+Later, I'll apply this work to create a kernel. I'm not looking to make a HAL-type layer to support baremetal programming, rather an entire kernel and OS if possible.
+
+## Why did am I making rusty-pi?
+
+For the most part, a learning experience. I was inspired by the work over at [rust-embedded/rust-raspberrypi-OS-tutorials](https://github.com/rust-embedded/rust-raspberrypi-OS-tutorials) and the hobby work of many similar projects I found on GitHub.
+
+However, I look forward to the point when this might become more than just a learning experience and something useful for other Raspberry Pi hobbyists! I'd be really interested in creating an OS prioritized for an IoT or RPI cluster application. I chose the Raspberry Pi over other boards because of how feature-rich it is with its onboard hardware.
+
+## Where can I check it out?
+
+The source code and instructions to reproduce my work on your own Raspberry Pi 4B can be found here: [a-vinod/rusty-pi](https://github.com/a-vinod/rusty-pi)! I encourage you to check it out and try it out yourself.
+
+All the sources I used throughout the development of this project will be appropriately cited on the README of the root project directory.
+
+Each of the milestones will be associated with a blog post as well -- note that they're not really walkthroughs of the code, rather a place for me to highlight challenges I encountered and mistakes I made.

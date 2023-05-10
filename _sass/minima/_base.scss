@@ -104,15 +104,10 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: $brand-color;
-  text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+    text-decoration: underline;
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .social-media-list &:hover {
@@ -236,14 +231,14 @@ table {
   border: 1px solid $grey-color-light;
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: lighten(#263238, 6%);
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
+    background-color: lighten(#455A64 , 6%);
     border: 1px solid darken($grey-color-light, 4%);
     border-bottom-color: darken($grey-color-light, 12%);
   }
