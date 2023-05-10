@@ -47,27 +47,27 @@ First check out the `boot.S` file in `src`. This will run first in our program a
 
 ```
 _start:
-	mrs     x0, MPIDR_EL1
-	and     x0, x1, #3
-	cbnz    x0, halt
+	mrs         x0, MPIDR_EL1
+	and         x0, x1, #3
+	cbnz        x0, halt
 
-	ldr x1, =__bss_start
-	ldr x2, =__bss_end
+	ldr         x1, =__bss_start
+	ldr         x2, =__bss_end
 
 clear_bss_loop:
-	cmp 	x1, x2
-	beq		boot_kernel
+	cmp 	    x1, x2
+	beq		    boot_kernel
 
-	stp	xzr, xzr, [x1], #16
-	bne		clear_bss_loop
+	stp	        xzr, xzr, [x1], #16
+	bne		    clear_bss_loop
 
 boot_kernel:
-	mov	sp, #0x80000
-	b _start_kernel
+	mov	        sp, #0x80000
+	b           _start_kernel
 
 halt:
 	wfe
-	b halt
+	b           halt
 ```
 
 For 64-bit operation, registers start with x.
