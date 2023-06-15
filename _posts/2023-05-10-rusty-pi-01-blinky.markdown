@@ -56,13 +56,13 @@ _start:
 
 clear_bss_loop:
 	cmp 	    x1, x2
-	beq		    boot_kernel
+	beq         boot_kernel
 
-	stp	        xzr, xzr, [x1], #16
-	bne		    clear_bss_loop
+	stp         xzr, xzr, [x1], #16
+	bne         clear_bss_loop
 
 boot_kernel:
-	mov	        sp, #0x80000
+	mov         sp, #0x80000
 	b           _start_kernel
 
 halt:
