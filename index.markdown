@@ -5,10 +5,6 @@
 layout: home
 ---
 
-*Hello!*
+*Hello!* Welcome to my notebook.
 
-Welcome to my notebook! I call it a notebook to signify the personal nature of this website.
-
-These notes may include my brainstorms, half-baked thoughts, and potentially ridiculous fun ideas in tech and sometimes climate/sustainability.
-
-I hope I can reach an audience who shares my enthusiasm and optimism.
+This blog functions as a home for my side projects and fun ideas in software engineering, computer architecture, and climate/sustainability.
