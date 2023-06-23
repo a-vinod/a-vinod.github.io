@@ -164,7 +164,7 @@ The GPIO legacy master address is 0x7e200000, so the offset is 0x200000. The poi
 ### Panic Handler
 The panic handler is a required function for `#![no_std]` like ours so we need to define one. We just put the process in an infinite loop in the event of a panic, which is fine here since it's a very simple program.
 
-## linker.d
+## linker.ld
 
 The linker is a very important component because it defines the format of the ELF executable that the compiler will produce. We will define the [text](https://en.wikipedia.org/wiki/Code_segment), [data](https://en.wikipedia.org/wiki/Data_segment), [BSS](https://en.wikipedia.org/wiki/.bss), and other segments of the program.
 
