@@ -37,10 +37,12 @@ cargo install cargo-binutils
 
 That's pretty much it! Now clone the [a-vinod/rusty-pi](https://github.com/a-vinod/rusty-pi) repository and go to the `01_blinky` subdirectory.
 
+<!--email_off-->
 ```bash
 git clone git@github.com:a-vinod/rusty-pi.git
 cd 01_blinky
 ```
+<!--/email_off-->
 
 ## src/boot.S
 First check out the `boot.S` file in `src`. This will run first in our program and perform some initialization steps.
